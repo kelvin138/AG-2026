@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoAgrinho 2025</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <!-- TELA INICIAL -->
+
+    <section id="start-screen" class="card">
+
+        <div class="logo">
+            🌱
+        </div>
+
+        <h1>EcoAgrinho Quiz</h1>
+
+        <p class="subtitle">
+            Tecnologia, Sustentabilidade e Futuro do Campo
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <span>📚</span>
+                <h3>20 Perguntas</h3>
+            </div>
+
+            <div class="info-box">
+                <span>⏱️</span>
+                <h3>15 Segundos</h3>
+            </div>
+
+            <div class="info-box">
+                <span>🏆</span>
+                <h3>Medalhas</h3>
+            </div>
+
+            <div class="info-box">
+                <span>📜</span>
+                <h3>Certificado</h3>
+            </div>
+
+        </div>
+
+        <button id="startBtn">
+            Começar Quiz
+        </button>
+
+    </section>
+
+    <!-- QUIZ -->
+
+    <section id="quiz-screen" class="card hidden">
+
+        <div class="top-bar">
+
+            <div class="question-count">
+                Pergunta
+                <span id="currentQuestion">
+                    1
+                </span>
+                /
+                <span id="totalQuestions">
+                    20
+                </span>
+            </div>
+
+            <div class="timer" id="timer">
+                15
+            </div>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div id="progress"></div>
+
+        </div>
+
+        <h2 id="question"></h2>
+
+        <div id="answers"></div>
+
+        <div id="feedback"></div>
+
+    </section>
+
+    <!-- RESULTADO -->
+
+    <section id="result-screen" class="card hidden">
+
+        <div id="medal"></div>
+
+        <h2>Resultado Final</h2>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <span id="finalScore">0</span>
+                <p>Pontos</p>
+            </div>
+
+            <div class="stat-box">
+                <span id="accuracy">0%</span>
+                <p>Acertos</p>
+            </div>
+
+        </div>
+
+        <h3 id="rankingPosition"></h3>
+
+        <p id="finalMessage"></p>
+
+        <button id="certificateBtn">
+            📜 Gerar Certificado
+        </button>
+
+        <button id="restartBtn">
+            🔄 Jogar Novamente
+        </button>
+
+    </section>
+
+    <!-- CERTIFICADO -->
+
+    <section id="certificate-screen" class="card hidden">
+
+        <div class="certificate">
+
+            <h1>CERTIFICADO</h1>
+
+            <p>
+                Certificamos que o participante concluiu
+                o Quiz EcoAgrinho com sucesso.
+            </p>
+
+            <h2 id="certificateScore"></h2>
+
+            <div id="certificateMedal"></div>
+
+            <button id="backResult">
+                Voltar
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- RANKING -->
+
+    <section class="ranking card">
+
+        <h2>🏆 Ranking Local</h2>
+
+        <ul id="rankingList">
+
+        </ul>
+
+    </section>
+
+</div>
+
+<!-- ÁUDIOS -->
+
+<audio id="correctSound">
+    <source src="assets/correct.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="wrongSound">
+    <source src="assets/wrong.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
